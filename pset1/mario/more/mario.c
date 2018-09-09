@@ -19,7 +19,7 @@ int main(void)
 // the columns
     for (int i = 0; i < height; i++)
     {
-        // the spaces
+        // the spaces before pyramid
 
         for (int k = height - 1; k > i ; k--)
         {
@@ -32,8 +32,9 @@ int main(void)
             printf("#");
 
         }
+        // spaces in between pyramids
         printf("  ");
-        // the row of opposite
+        // the row of opposite hashes
         for (int j = 0; j <= i; j++)
         {
             printf("#");
