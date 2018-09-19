@@ -5,24 +5,27 @@
 int main(void)
 {
 
-    int i, checkSum = 0;
-    int creditNumber[];
 
-    do
+    long long getCredit;
 
-    {
-        creditNumber[] = get_long_long("What is your credit card number? "); // asking for change
-    }
-    while (creditNumber.length = 15);
+do {
+       getCredit = get_long_long("What is your credit card number? "); // asking for credit number
+}
+
+while (getCredit <= 0); // make sure it is positive
+
+
+   int countNumber = 0; // number of digits
+
+countNumber = log10(getCredit) + 1; // counts total number of digits
+
+// printf("Total digits: %d\n", countNumber); // prints out number of digits
+
+if (countNumber < 13 || countNumber > 16) // invalid if number is not between 13-16
+{
+ printf("INVALID\n");
+}
+
 
 
 }
-
-// promt for user input
-// multiply every other digit
-// sum those digits
-// add to remaining digits
-// validate checksum
-// validate company's identifier
-// validate number's length
-
