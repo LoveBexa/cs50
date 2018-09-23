@@ -27,11 +27,11 @@ int main(int argc, string argv[])
         // checking if it is lowercase 97 = a to 112 = z and if it + 13 characters along.
         if (s[i] >= 'a' && s[i] <= 'z')
         {
-            printf("%c", (s[i] - 'a') + k) % 26) + 'a'; // print out uppercase with key
+            printf("%c", (((s[i] - 'a') + k) % 26) + 'a'); // print out uppercase with key
         } // if it it between uppercase A and C
         else if (s[i] >= 'A' && s[i] <= 'Z')
         {
-            printf("%c", 'A' + (s[i] - 'A' + k) % 26); // print out uppercase with key
+            printf("%c", (((s[i] - 'A') + k) % 26) + 'A'); // print out uppercase with key
         }
 
         else
