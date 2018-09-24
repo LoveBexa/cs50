@@ -7,6 +7,9 @@
 int main(int argc, string argv[])
 {
 
+    int l; // individual key position
+    int v; // new converted key
+
 
 // check no. or arguments given make sure there is only 1
     if (argc != 2)
@@ -24,59 +27,45 @@ int main(int argc, string argv[])
 // iterate through plain text letter by letter
 
 
-//   string alphabet = "abcdefghijklmnopqrstuvwxyz";
-    for (int i = 0, n = strlen(s) ; i < n; i++) // iterate through each char of string
+    for (int i = 0, n = strlen(s); i < n; i++) // iterate through each char of string
     {
-// 1 % 3 = 1
-// 2 % 3 = 2
-// 3 % 3 = 0
-// 4 % 3 = 1
-// 5 % 3 = 2
+
 
 // once position of key found. we convert into basic alphabetical order. THEN we add this on
+         l =  i % strlen(k); // l is the position in the key
 
-            int l =  i % 3; // l is the position in the key
-int v; // the new converted key
-    if (k[l] >= 'a' && k[l] <= 'z')
+    if (islower(k[l]))
             {
-                v = k[l] - 'a'; //
+                v = k[l] - 'a'; // v is the new converted key
+                            //   printf("%d", v);
             }
 
-        else if (k[l] >= 'A' && k[l] <= 'Z')
+        else if (isupper(k[l]))
             {
               v = k[l] - 'A'; // 75 - 65 = 10
-            }
-
-else  {
-                printf("Error");
-
+            //   printf("%i", v);
             }
 
 
-            if (islower('s[i]'))
+            if (islower(s[i]))
             {
                 printf("%c", (((s[i] - 'a') + v) % 26) + 'a'); // print out lowercase with key;
 
-            } // if it it between uppercase A and C
-            else if (isupper('s[i]'))
+            }
+            else if (isupper(s[i]))
             {
                 printf("%c", (((s[i] - 'A') + v) % 26) + 'A');  // print out uppercase with key;
-
             }
 
             else
 
             {
+                // l =  (i - 1) % strlen(k);
                 printf("%c", s[i]);
+                return 0;
 
             }
 
-
-
-
-
-
-        // checking if it is lowercase 97 = a to 112 = z and if it + 13 characters along.
 
     }
 
